@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  min-height: 100vh;
+  background-color: #f2f2f2;
+  display: grid;
+  place-content: center;
+  line-height: 1.5rem;
+}
+
+.wrapper {
+  width: min(80%, 45rem);
+  margin: 0 auto;
+}
+
+.card {
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.first-card {
+  background-color: #fff;
+  border-radius: 7px 7px 0 0;
+}
+
+h2 {
+color: var(--cyan);
+font-size: 1.5rem;
+font-weight: 700;
+}
+
+.first-card h3 {
+  color: var(--bright-yellow);
+  font-size: 1.125rem;
+  padding: 1.2rem 0 1.2rem 0;
+}
+
+.first-card p {
+  font-size: 0.875rem;
+  color: var(--grayish-blue);
+}
+
+.second-card,
+.third-card {
+  background-color: var(--cyan);
+  color: #fff;
+}
+
+h3 {
+  font-size: 1.125rem;
+  padding: 0 0 1.2rem 0;
+}
+
+.month {
+    font-size: 1rem;
+    opacity: 0.5
+}
+
+.price {
+  display: flex;
+  gap: 12px;
+  padding: 0 0 0.8rem 0;
+}
+
+.access {
+  font-weight: 400;
+  padding: 0 0 1.5rem;
+}
+
+.sign-up {
+  background: var(--bright-yellow);
+  border: none;
+  color: #fff;
+  font-size; 1rem;
+  font-weight: 700;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.0973011);
+border-radius: 5px;
+padding: 12px 0;
+width: 70%;
+
+
+
+
+}
+
+.third-card {
+background: var(--cyan);
+opacity: 0.85;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 42rem) {
+  .wrapper {
+    display: grid;
+    grid-template-areas:
+    "one one"
+    "two three";
+  }
+
+  .first-card {
+    grid-area: one;
+  }
+  .second-card {
+    grid-area: two;
+  }
+
+  .third-card {
+    grid-area: three;
+  }
+}
+
